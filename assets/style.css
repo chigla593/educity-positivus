@@ -39,6 +39,7 @@ header {
                 border: 1px solid var(--secondary-color);
                 border-radius: 14px;
                 padding: 20px 35px;
+                cursor: pointer;
             
             }
     }
@@ -68,6 +69,7 @@ header {
             width:264px;
             height:68px;
             border-radius: 14px;
+            cursor: pointer;
      }
 
      & img {
@@ -92,4 +94,29 @@ header {
             width: 120px;
         }
     }
+}
+
+.services {
+    
+    margin-top: 140px;
+    & h2 {
+    
+        
+        text-transform: capitalize;
+        background-color: var(--primary-bg);
+        width: fit-content;
+        padding: 7px 7px
+        
+        
+        
+    }
+    & p {
+       
+        display: inline;
+        
+       
+        
+        
+    }
+
 }
