@@ -64,6 +64,10 @@ header  {
         border-radius: 14px;
         padding: 20px 35px;
     }
-    
+
+    & ul.partnetr-wrapper {
+         gap: 40px;
+        display:flex;
+    }
 
 }
