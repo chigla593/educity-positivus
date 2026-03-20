@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
 :root {
     --primary-color: #b9ff66;
     --secondary-color: #000000;
@@ -10,18 +22,66 @@
 
 }
 
+/* utilities */
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+.bg-dark {
+    background-color: var(--secondary-color);
+}
+.bg-light {
+    background-color: var(--light-color);
+}
+.c-primary {
+    color: var(--primary-color);
+}
+.c-dark {
+    color: var(--secondary-color);
+}
+.c-light {
+    color: var(--light-color);
+}
+
+.flex {
+    display: flex;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-items: center;
+}
+.direction-column {
+    flex-direction: column;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+
+.h100 {
+    height: 100%;
+}
+
+
+
+
+
+
+
 .container {
     max-width: 1240px;
     width: 90%;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin: 0 auto;
     
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+header{
+    
     margin-top: 60px;
   
     & nav {
@@ -96,27 +156,61 @@ header {
     }
 }
 
-.services {
-    
-    margin-top: 140px;
-    & h2 {
-    
+section.services {
+    & header {
         
-        text-transform: capitalize;
-        background-color: var(--primary-bg);
-        width: fit-content;
-        padding: 7px 7px
-        
-        
-        
+        & p {
+            max-width: 580px;
+        }
     }
-    & p {
-       
-        display: inline;
+    & .cards-wrapper {
+        gap: 40px;
         
-       
-        
-        
-    }
+        & .card {
+            width: 600px;
+            height: 310px;
+            padding: 50px;
+            border-radius: 45px;
+            border: 1px inset var(--secondary-color);
+            box-shadow: 0 5px 0 0 var(--secondary-color);
 
+            &:hover {
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                transform: translate3d(0, 0, 0);
+                perspective: 1000px;
+            }
+            & .text-content {
+                width: 220px;
+                
+                & h3 {
+                    font-size: var(--third-level-heading);
+                    text-transform: capitalize;
+                    & span {
+                        border-radius: 7px;
+                        padding-inline: 7px;
+                        display: inline-block;
+                        white-space: nowrap;
+                    }
+                }
+                & a {
+                    gap: 15px;
+                    font-size: 20px;
+                    & .circle {
+                        width: 41px;
+                        height: 41px;
+                        border-radius: 50%;
+                        & svg {
+
+                        }
+                    }
+
+                }
+            }  
+            & .image-content {
+                & img {
+                    display: block;
+                }
+            }
+        }
+    }
 }
